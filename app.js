@@ -11,7 +11,7 @@ app.get('/',function(req, res) {
 });
 app.use('/client',express.static(__dirname + '/client'));
 
-var PORT = 2000;
+const PORT = process.env.PORT || 2000;
 
 serv.listen(PORT);
 console.log("Server started on port " + PORT);
